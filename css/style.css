@@ -5,6 +5,7 @@
 }
 
 :root {
+  --grey-text-color: #787673;
   --selected-candidate: #20bd30;
   --waitlisted-candidate: #ffa52b;
   --rejected-candidate: #f85253;
@@ -182,7 +183,7 @@ aside ul li span {
   height: 650px;
   position: absolute;
   top: 115px;
-  left: 170px;
+  left: 155px;
   display: flex;
   flex-direction: column;
 }
@@ -403,4 +404,96 @@ aside ul li span {
 
 .candidate-card.none {
   border: 2px solid var(--nostatus-candidate);
+}
+
+/* CSS for postion options */
+
+.position-options-container {
+  width: 168px;
+  height: 300px;
+  position: absolute;
+  top: 200px;
+  right: 120px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  transform: scale(1.2);
+}
+
+hr {
+  align-self: stretch;
+}
+
+.position-options-container ul {
+  list-style: none;
+}
+
+.edit-btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  height: 40px;
+  padding: 10px;
+  background-color: var(--waitlisted-candidate);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-options,
+.match-stats-container {
+  display: flex;
+  color: var(--brown-text-color);
+  cursor: pointer;
+  font-weight: bold;
+  height: 80px;
+  font-size: small;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.exp-date,
+.ref-no,
+.stat-text {
+  color: var(--grey-text-color);
+}
+
+.position-stats {
+  display: flex;
+  font-size: small;
+  border-radius: 5px;
+  border: 1px solid var(--cand-container-border);
+}
+
+.position-stats:first-child {
+  background-color: black;
+}
+
+.stats-list {
+  padding: 3px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 249, 246, 1) 35%,
+    rgba(251, 239, 230, 1) 100%
+  );
+  border-right: 1px solid #f3e7d9;
+}
+
+.stat-count {
+  color: var(--waitlisted-candidate);
+}
+
+.stat-first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.stat-last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

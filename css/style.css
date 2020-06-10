@@ -409,11 +409,11 @@ aside ul li span {
 /* CSS for postion options */
 
 .position-options-container {
-  width: 168px;
+  width: 195px;
   height: 300px;
   position: absolute;
   top: 200px;
-  right: 120px;
+  right: 90px;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -474,7 +474,7 @@ hr {
 }
 
 .stats-list {
-  padding: 3px;
+  padding: 8px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
     180deg,

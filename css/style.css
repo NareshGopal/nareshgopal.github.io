@@ -459,6 +459,7 @@ hr {
 .ref-no,
 .stat-text {
   color: var(--grey-text-color);
+  cursor: initial;
 }
 
 .position-stats {

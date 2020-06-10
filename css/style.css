@@ -5,6 +5,10 @@
 }
 
 :root {
+  --selected-candidate: #20bd30;
+  --waitlisted-candidate: #ffa52b;
+  --rejected-candidate: #f85253;
+  --nostatus-candidate: #f7f2e6;
   --hover-color: #ff782b;
   --icon-grey: #9b9b9b;
   --text-option-grey: #6f624e;
@@ -59,9 +63,10 @@ nav ul li {
   border-left: 1px solid #f3e7d9;
   border-right: 1px solid #f3e7d9;
   color: var(--icon-grey);
+  cursor: pointer;
 }
 
-.fas {
+.nav-option-item .fas {
   padding-top: 15px;
 }
 
@@ -94,6 +99,7 @@ nav ul li {
 .logout {
   margin-top: -5px;
   color: var(--brown-text-color);
+  cursor: pointer;
 }
 
 .profile-pic {
@@ -104,6 +110,7 @@ nav ul li {
   border-top: 2px inset;
   border-radius: 10px;
   margin-right: 25px;
+  cursor: pointer;
 }
 
 /* CSS for aside nav bar */
@@ -130,6 +137,7 @@ aside ul li {
   height: 100px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 aside ul li span {
@@ -175,6 +183,8 @@ aside ul li span {
   position: absolute;
   top: 115px;
   left: 170px;
+  display: flex;
+  flex-direction: column;
 }
 
 .candidate-display-container header {
@@ -186,7 +196,7 @@ aside ul li span {
   border-top-right-radius: 10px;
 }
 
-.candidate-display-container ul {
+.candidate-display-container .header-container {
   list-style: none;
   display: flex;
   justify-content: flex-start;
@@ -194,7 +204,20 @@ aside ul li span {
   flex-flow: row nowrap;
 }
 
+.candidate-display-container footer {
+  height: 70px;
+  width: 100%;
+  background-color: var(--cand-header-bg);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.candidate-display-container main {
+  flex-grow: 1;
+}
+
 .candidate-options {
+  padding: 5px;
   height: 30px;
   width: 80px;
   display: flex;
@@ -203,6 +226,7 @@ aside ul li span {
   border-radius: 8px;
   margin-left: 10px;
   color: var(--text-option-grey);
+  cursor: pointer;
 }
 
 .candidate-options:hover,
@@ -245,7 +269,136 @@ aside ul li span {
   right: -20px;
 }
 
-.candidate-display-container footer {
-  height: 70px;
-  background-color: var(--cand-header-bg);
+/* CSS for Candidate card */
+
+.candidates-list {
+  padding: 20px;
+  padding-right: 0;
+  height: 510px;
+  width: 600px;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+
+.candidate-card {
+  flex-shrink: 0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 20px;
+  width: 170px;
+  height: 220px;
+  background-color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  position: relative;
+  font-size: medium;
+}
+
+/* CSS for individual item inside candidate card */
+
+.candidate-photo {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.candidate-card .name {
+  color: var(--brown-text-color);
+}
+
+.candidate-card .name:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.candidate-card .designation {
+  color: var(--text-option-grey);
+}
+
+.candidate-card .company-name {
+  color: var(--brown-text-color);
+}
+
+.candidate-card .contact-opt {
+  color: var(--brown-text-color);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.contact-opt .fa-calendar-alt {
+  margin-left: 5px;
+}
+
+.fa-check {
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  background-color: var(--selected-candidate);
+  color: white;
+}
+
+.fa-sync-alt {
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  background-color: var(--waitlisted-candidate);
+  color: white;
+}
+
+.fa-times {
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  background-color: var(--rejected-candidate);
+  color: white;
+}
+
+.fa-none {
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  background-color: var(--nostatus-candidate);
+  /* box-shadow: 1px 1px 1px var(--icon-grey); */
+  color: white;
+}
+
+.candidate-card.selected {
+  border: 1px solid var(--selected-candidate);
+}
+
+.candidate-card.waitlisted {
+  border: 1px solid var(--waitlisted-candidate);
+}
+
+.candidate-card.rejected {
+  border: 1px solid var(--rejected-candidate);
+}
+
+.candidate-card.none {
+  border: 2px solid var(--nostatus-candidate);
 }

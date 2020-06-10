@@ -38,7 +38,7 @@
         </div>
         <div class="profile">
           <div class="profile-info">
-            <p class="username">Shyam</p>
+            <p class="username">Naresh</p>
             <p class="logout">Logout</p>
           </div>
           <div class="profile-pic"></div>
@@ -71,7 +71,7 @@
       </aside>
       <div class="candidate-display-container">
         <header>
-          <ul>
+          <ul class="header-container">
             <li class="candidate-options">Summary</li>
             <li class="candidate-options">Applied</li>
             <li class="candidate-options active-orange">Shortlisted</li>
@@ -83,11 +83,74 @@
         </header>
         <main>
           <ul class="candidates-list">
-            <li class="candidate-card"></li>
-            <li class="candidate-card"></li>
-            <li class="candidate-card"></li>
-            <li class="candidate-card"></li>
+            <li class="candidate-card selected">
+              <img
+                src="https://avatars1.githubusercontent.com/u/52106625?s=150&v=4"
+                alt="Candidate Photo"
+                class="candidate-photo"
+                style="width: 100%; height: 100px;"
+              />
+              <p class="name">Naresh</p>
+              <p class="designation">UI Developer</p>
+              <p class="company-name">Company Name</p>
+              <div class="contact-opt">
+                <i class="fas fa-envelope"></i>
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <!-- <img src="./Images/ok.png" alt="Ok" class="candidate-status" /> -->
+              <i class="fas fa-check fa-1g candidate-status"></i>
+            </li>
+            <li class="candidate-card waitlisted">
+              <img
+                src="https://avatars1.githubusercontent.com/u/52106625?s=150&v=4"
+                alt="Candidate Photo"
+                class="candidate-photo"
+                style="width: 100%; height: 100px;"
+              />
+              <p class="name">Naresh</p>
+              <p class="designation">UI Developer</p>
+              <p class="company-name">Company Name</p>
+              <div class="contact-opt">
+                <i class="fas fa-envelope"></i>
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <i class="fas fa-sync-alt"></i>
+            </li>
+            <li class="candidate-card none">
+              <img
+                src="https://avatars1.githubusercontent.com/u/52106625?s=150&v=4"
+                alt="Candidate Photo"
+                class="candidate-photo"
+                style="width: 100%; height: 100px;"
+              />
+              <p class="name">Naresh</p>
+              <p class="designation">UI Developer</p>
+              <p class="company-name">Company Name</p>
+              <div class="contact-opt">
+                <i class="fas fa-envelope"></i>
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              
+              <i class="fas fa-none"></i
+            </li>
+            <li class="candidate-card rejected">
+              <img
+                src="https://avatars1.githubusercontent.com/u/52106625?s=150&v=4"
+                alt="Candidate Photo"
+                class="candidate-photo"
+                style="width: 100%; height: 100px;"
+              />
+              <p class="name">Naresh</p>
+              <p class="designation">UI Developer</p>
+              <p class="company-name">Company Name</p>
+              <div class="contact-opt">
+                <i class="fas fa-envelope"></i>
+                <i class="far fa-calendar-alt"></i>
+              </div>
+              <i class="fas fa-times"></i>
+            </li>
           </ul>
+          <div class="candidate-status"></div>
         </main>
         <footer></footer>
       </div>

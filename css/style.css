@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hover-color: #ff782b;
+  --icon-grey: #9b9b9b;
+  --text-option-grey: #6f624e;
+  --cand-container-border: #dfc8a2;
+  --cand-header-bg: #fbf2e7;
+  --tag-color: #423f41;
+  --tag-bottom-color: #c8a677;
+  --brown-text-color: #903a14;
+  --prof-pic-path: url(../Images/profpic.jpeg);
+  --container-bg: url(../Images/containerbg.png);
+  --body-bg: url(../Images/bodybackground.png);
+}
+
+body {
+  text-align: center;
+  background-image: var(--body-bg);
+}
+
+.webpage-container {
+  height: 900px;
+  width: 1100px;
+  margin: auto;
+  background-image: var(--container-bg);
+  position: relative;
+}
+
+/* CSS for main nav bar */
+
+nav {
+  height: 70px;
+  width: 100%;
+  background-color: #faf6f1;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  box-shadow: 0 8px 10px -6px grey;
+}
+
+.company-logo {
+  width: 200px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  height: 70px;
+  width: 75px;
+  border-left: 1px solid #f3e7d9;
+  border-right: 1px solid #f3e7d9;
+  color: var(--icon-grey);
+}
+
+.fas {
+  padding-top: 15px;
+}
+
+.nav-option-item:hover {
+  background-color: #ff782b;
+  color: #fff;
+}
+
+.profile {
+  justify-self: flex-end;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile div {
+  height: 55px;
+  width: 100px;
+  font-size: 14px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: -20px;
+}
+
+.logout {
+  margin-top: -5px;
+  color: var(--brown-text-color);
+}
+
+.profile-pic {
+  background-image: var(--prof-pic-path);
+  background-size: cover;
+  width: 55px !important;
+  border: 1px solid grey;
+  border-top: 2px inset;
+  border-radius: 10px;
+  margin-right: 25px;
+}
+
+/* CSS for aside nav bar */
+
+aside {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  background-color: #565656;
+  width: 120px;
+  height: 830px;
+  /* box-shadow: 2px 2px 2px 2px black; */
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+aside ul li {
+  width: 120px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+aside ul li span {
+  font-size: medium;
+}
+
+.side-nav-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-nav-options i {
+  padding: 0;
+}
+
+.active-black,
+.side-nav-options:hover {
+  background-color: #4e4e4e;
+  color: white;
+  position: relative;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 10px solid #ede5d9;
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+}
+
+/* CSS for candidate container */
+
+.candidate-display-container {
+  background-color: white;
+  border: 2px solid var(--cand-container-border);
+  border-radius: 10px;
+  width: 600px;
+  height: 650px;
+  position: absolute;
+  top: 115px;
+  left: 170px;
+}
+
+.candidate-display-container header {
+  height: 70px;
+  background-color: #fbf2e7;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.candidate-display-container ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.candidate-options {
+  height: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-left: 10px;
+  color: var(--text-option-grey);
+}
+
+.candidate-options:hover,
+.active-orange {
+  background-color: var(--hover-color);
+  color: #fff;
+}
+
+.candidate-option-tag {
+  background-color: #ffd283;
+  color: var(--tag-color);
+  font-weight: bolder;
+  height: 35px;
+  width: 110px;
+  position: absolute;
+  top: 17.5px;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 15px solid var(--cand-header-bg);
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  right: 75px;
+}
+
+.triangle-topleft {
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--tag-bottom-color);
+  border-right: 20px solid transparent;
+  position: absolute;
+  top: 52.5px;
+  right: -20px;
+}
+
+.candidate-display-container footer {
+  height: 70px;
+  background-color: var(--cand-header-bg);
+}

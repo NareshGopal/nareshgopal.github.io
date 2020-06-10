@@ -308,7 +308,7 @@ aside ul li span {
 
 .candidate-card .name {
   color: var(--brown-text-color);
-  font-size: medium;
+  font-size: large;
 }
 
 .candidate-card .name:hover {

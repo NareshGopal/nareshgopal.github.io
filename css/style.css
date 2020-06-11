@@ -59,22 +59,26 @@ nav {
   padding: 10px;
 }
 
+.nav-options {
+  height: 100%;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  height: 100%;
 }
 
 nav ul li {
-  height: 70px;
+  height: 100%;
   width: 75px;
   border-left: 1px solid #f3e7d9;
   border-right: 1px solid #f3e7d9;
   color: var(--icon-grey);
   cursor: pointer;
-}
-
-.nav-option-item .fas {
-  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-option-item:hover {
@@ -124,12 +128,11 @@ nav ul li {
 
 aside {
   position: absolute;
-  top: 70px;
+  top: 9.26%;
   left: 0;
   background-color: #565656;
   width: 120px;
   height: 90.74%;
-  /* box-shadow: 2px 2px 2px 2px black; */
 }
 
 aside ul {

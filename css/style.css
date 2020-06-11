@@ -2,6 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+html {
+  height: 100%;
 }
 
 :root {
@@ -24,12 +29,13 @@
 }
 
 body {
+  height: 100%;
   text-align: center;
   background-image: var(--body-bg);
 }
 
 .webpage-container {
-  height: 900px;
+  height: 100%;
   width: 1100px;
   margin: auto;
   background-image: var(--container-bg);
@@ -122,7 +128,7 @@ aside {
   left: 0;
   background-color: #565656;
   width: 120px;
-  height: 830px;
+  height: 90.74%;
   /* box-shadow: 2px 2px 2px 2px black; */
 }
 
@@ -180,7 +186,7 @@ aside ul li span {
   border: 2px solid var(--cand-container-border);
   border-radius: 10px;
   width: 600px;
-  height: 650px;
+  height: auto;
   position: absolute;
   top: 115px;
   left: 155px;
@@ -189,7 +195,7 @@ aside ul li span {
 }
 
 .candidate-display-container header {
-  height: 70px;
+  height: 60px;
   background-color: #fbf2e7;
   display: flex;
   align-items: center;
@@ -206,7 +212,7 @@ aside ul li span {
 }
 
 .candidate-display-container footer {
-  height: 70px;
+  height: 60px;
   width: 100%;
   background-color: var(--cand-header-bg);
   border-bottom-left-radius: 10px;
@@ -215,6 +221,20 @@ aside ul li span {
 
 .candidate-display-container main {
   flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #faefe2;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--waitlisted-candidate);
 }
 
 .candidate-options {
@@ -243,7 +263,7 @@ aside ul li span {
   height: 35px;
   width: 110px;
   position: absolute;
-  top: 17.5px;
+  top: 12.5px;
   right: -20px;
   display: flex;
   justify-content: center;
@@ -266,28 +286,26 @@ aside ul li span {
   border-top: 10px solid var(--tag-bottom-color);
   border-right: 20px solid transparent;
   position: absolute;
-  top: 52.5px;
+  top: 47.5px;
   right: -20px;
 }
 
 /* CSS for Candidate card */
 
 .candidates-list {
-  padding: 20px;
   padding-right: 0;
   height: 510px;
   width: 600px;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  align-content: space-around;
 }
 
 .candidate-card {
   flex-shrink: 0;
   border-radius: 10px;
   padding: 10px;
-  margin-right: 20px;
+  margin: 15px 15px;
   width: 170px;
   height: 220px;
   background-color: white;
@@ -440,6 +458,11 @@ hr {
   color: white;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.edit-btn:hover {
+  transform: scale(0.98);
+  background-color: #fd9c13;
 }
 
 .profile-options,

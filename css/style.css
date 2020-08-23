@@ -191,7 +191,7 @@ aside ul li span {
   width: 600px;
   height: auto;
   position: absolute;
-  top: 115px;
+  top: 15%;
   left: 155px;
   display: flex;
   flex-direction: column;
@@ -433,7 +433,7 @@ aside ul li span {
   width: 195px;
   height: 300px;
   position: absolute;
-  top: 200px;
+  top: 25%;
   right: 90px;
   display: flex;
   flex-flow: column nowrap;
@@ -523,4 +523,10 @@ hr {
 .stat-last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+#reference-image {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
